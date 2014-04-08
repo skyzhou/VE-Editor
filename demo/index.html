@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>编辑器demo</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <script type="text/javascript" src="../ve.min.js"></script>
+    <style type="text/css">
+        body{
+            margin: 0px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="editor1" style="width:700px;"></div>
+    <div style="margin-top:50px;">
+        <button onclick="alert(ed1.getContent())">获取编辑器内容</button>
+        <button onclick="ed1.setContent('你的内容')">设置编辑器内容</button>
+        <button onclick="alert(ed1.getTitle('你的内容'))">提取内容标题</button>
+        <button onclick="alert(ed1.isEmpty())">内容是否为空</button>
+        <button onclick="ed1.focus()">获取焦点</button>
+    </div>
+    
+</body>
+<script type="text/javascript">
+    //document.domain = document.domain;
+    var $ = function(id){
+        return document.getElementById(id);
+    }
+    
+    var ed1 =new ve.Create({
+		commands:['FontSize','bold','underline','strikethrough','italic',"forecolor",'backcolor','justifyleft','justifycenter','justifyright','createLink','image'],
+        container:$("editor1"),
+        height:'300px',
+        width:'700px',
+        imgUploadUrl:'http://skyzhou.com/ve/upload.php'
+	});
+
+    ed1.setContent('<div>北京时间4月09日凌晨2:45，2013-14赛季欧洲冠军联赛1/4决赛次回合将迎来一场焦点战役，皇家马德里客场挑战德甲劲旅多特蒙德。由于首回合3比0大胜，皇马(官方微博 数据) 静候连续4赛季晋级欧冠(微博 专题) 4强，C罗(微博 数据) 也将在西甲(微博 专题) 休战一场后迎来复出冲击欧冠单季进球纪录。腾讯体育讯将对本场比赛进行视频直播，敬请关注.</div>');
+
+    
+</script>
+
+</html>
