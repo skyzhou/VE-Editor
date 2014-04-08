@@ -26,7 +26,7 @@ __demo__: [http://skyzhou.com/ve/demo/index.html](http://skyzhou.com/ve/demo/ind
 2、指定编辑器所在容器
 
 ```html
-<div id="eidtor"></div>
+<div id="editor"></div>
 ```
 
 3、在指定的容器里创建编辑器实例
@@ -34,7 +34,7 @@ __demo__: [http://skyzhou.com/ve/demo/index.html](http://skyzhou.com/ve/demo/ind
 ```javascript
 var ed =new ve.Create({
 		commands:['FontSize','bold','underline','strikethrough','italic',"forecolor",'backcolor','justifyleft','justifycenter','justifyright','createLink','image'],
-        container:ve.$("eidtor"),
+        container:ve.$("editor"),
         height:'300px',
         width:'700px',
         imgUploadUrl:'http://skyzhou.com/ve/upload.php'
