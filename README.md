@@ -34,7 +34,7 @@ __demo__: [http://skyzhou.com/ve/demo/index.html](http://skyzhou.com/ve/demo/ind
 ```javascript
 var ed =new ve.Create({
 		commands:['FontSize','bold','underline','strikethrough','italic',"forecolor",'backcolor','justifyleft','justifycenter','justifyright','createLink','image'],
-        container:ve.$("editor"),
+        container:document.getElementById("editor"),
         height:'300px',
         width:'700px',
         imgUploadUrl:'http://skyzhou.com/ve/upload.php'
@@ -62,14 +62,14 @@ var ed =new ve.Create({
 
 * 传参
 
-	image:文件内容
-	format:指定返回格式，可选格式（html,json）
+	- image:文件内容
+	- format:指定返回格式，可选格式（非IE：json，IE6～8：html）
 
-* 回参
+* 回参（如果传参为html格，需要使用html格式返回，参考demo）
 
-	code:返回码，如果成功则为0
-	url:图片的完整url地址，带协议
-	msg:如果出错，定义出错原因
+	- code:返回码，如果成功则为0
+	- url:图片的完整url地址，带协议
+	- msg:如果出错，定义出错原因
 
 ## 插件
 
