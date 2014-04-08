@@ -34,7 +34,7 @@ __demo__: [http://skyzhou.com/ve/demo/index.html](http://skyzhou.com/ve/demo/ind
 ```javascript
 var ed =new ve.Create({
 		commands:['FontSize','bold','underline','strikethrough','italic',"forecolor",'backcolor','justifyleft','justifycenter','justifyright','createLink','image'],
-        container:$("eidtor"),
+        container:ve.$("eidtor"),
         height:'300px',
         width:'700px',
         imgUploadUrl:'http://skyzhou.com/ve/upload.php'
