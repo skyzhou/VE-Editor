@@ -9,7 +9,7 @@
 * 支持浮动工具栏编辑
 
 
-# 效果
+## 效果
 
 ![screenshot](https://raw.github.com/skyzhou/VE-Editor/master/demo/ve-editor.jpg)
 
@@ -44,7 +44,7 @@ var ed =new ve.Create({
 
 
 
-#参数配置
+## 参数配置
 
 * commands:需要启用的插件，详见【插件】
 * container:编辑器所在容器，默认空元素
@@ -56,7 +56,7 @@ var ed =new ve.Create({
 
 
 
-#图片上传
+## 图片上传
 
 如果启用了"image"插件，需要设置imgUploadUrl，imgUploadUrl的传参和返回如下（可参考upload.php）：
 
@@ -71,7 +71,7 @@ var ed =new ve.Create({
 	url:图片的完整url地址，带协议
 	msg:如果出错，定义出错原因
 
-#插件
+## 插件
 
 
 * bold 加粗
@@ -87,7 +87,7 @@ var ed =new ve.Create({
 * justifyright 居右
 * justifycenter 居中
 
-#目录结构
+## 目录结构
 
 ```
 ve-editor/
@@ -110,7 +110,7 @@ ve-editor/
 └── ve.min.js
 ```
 
-#License
+## License
 
 MIT
 
