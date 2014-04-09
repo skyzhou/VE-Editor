@@ -19,7 +19,7 @@ $result = array(
 	"msg"=>"文件名不合法",
 	"url"=>""
 );
-if(ereg("^image\/(png|jpg|jpeg|gif|pjpeg)$",strtolower($file['type']))){
+if(preg_match("/^image\/(png|jpg|jpeg|gif|pjpeg)$/",strtolower($file['type']))){
 	 $fileName = UPLOADS .md5(time()).'.'.end(explode('.', $file['name']));
 	 move_uploaded_file($file["tmp_name"],$fileName);
 	 $result['code'] = 0;
